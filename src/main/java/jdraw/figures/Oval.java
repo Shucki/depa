@@ -23,9 +23,9 @@ import jdraw.framework.FigureListener;
  * @author Christoph Denzler
  *
  */
-public class Rect extends AbstractRect implements Figure {
+public class Oval extends AbstractRect implements Figure {
 	
-	public Rect(int x, int y, int w, int h) {
+	public Oval(int x, int y, int w, int h) {
 		super(x, y, w, h);
 	}
 
@@ -36,10 +36,10 @@ public class Rect extends AbstractRect implements Figure {
 	@Override
 	public void draw(Graphics g) {
 		g.setColor(Color.WHITE);
-		g.fillRect(rectangle.x, rectangle.y, 
+		g.fillOval(rectangle.x, rectangle.y, 
 							 rectangle.width, rectangle.height);
 		g.setColor(Color.BLACK);
-		g.drawRect(rectangle.x, rectangle.y, 
+		g.drawOval(rectangle.x, rectangle.y, 
 							 rectangle.width, rectangle.height);
 	}
 	
